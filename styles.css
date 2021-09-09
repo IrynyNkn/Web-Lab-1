@@ -93,10 +93,13 @@ a:visited {
 .inMain {
   grid-area: inMain;
   background-color: rgb(168, 231, 200);
+  padding: 20px;
+}
+
+.picWrap {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .contentBox {
@@ -137,10 +140,41 @@ a:visited {
   color: blueviolet;
 }
 
+.inMain__pic {
+  width: 100%;
+}
+
 footer {
   display: grid;
   justify-content: start;
   align-items: center;
   background-color: rgb(221, 217, 153);
   grid-area: footer;
+}
+
+@media (max-width: 600px) {
+  aside {
+    padding: 5px;
+  }
+  .inMain {
+    padding: 0;
+  }
+  .inAside {
+    padding: 5px;
+  }
+  ul {
+    padding: 0;
+  }
+  .menu {
+    font-size: 20px;
+  }
+  li {
+    font-size: 14px;
+  }
+  .contentBox {
+    font-size: 0.6em;
+  }
+  .contentBox__icon {
+    font-size: 16px;
+  }
 }
