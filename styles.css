@@ -165,6 +165,9 @@ footer {
   ul {
     padding: 0;
   }
+  h2 {
+    font-size: 18px;
+  }
   .menu {
     font-size: 20px;
   }
