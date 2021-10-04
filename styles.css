@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-/* *:not(li) {
-  overflow: hidden;
-} */
-
 html {
   font-family: 'Merienda', cursive;
 }
@@ -20,13 +16,15 @@ body {
 }
 
 body {
+  padding: 5px;
   display: grid;
+  grid-gap: 5px;
   grid-template-areas:
     'aside header'
     'aside main'
     'footer footer';
 
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 20% auto 20%;
 }
 
@@ -58,13 +56,14 @@ aside {
 }
 
 main {
-  background-color: skyblue;
   grid-area: main;
   display: grid;
+  grid-gap: 5px;
   grid-template-areas:
     'inHeader inAside'
     'inMain inAside';
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 80px auto;
 }
 
 ol {
@@ -116,7 +115,7 @@ a:visited {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .picWrap {
@@ -179,6 +178,12 @@ footer div:last-child {
   padding: 0 10px;
 }
 
+.sideText__content,
+.footer__content {
+  border: 3px solid black;
+  padding: 5px;
+}
+
 @media (max-width: 600px) {
   aside {
     padding: 5px;
@@ -208,3 +213,84 @@ footer div:last-child {
     font-size: 16px;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__input {
+  flex: 1;
+  margin-left: 5px;
+  text-align: center;
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(220, 250, 236);
+}
+
+.form__containerInput {
+  width: 80%;
+  display: flex;
+}
+
+.form__containerSubmit {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.form__btn {
+  font-size: 16px;
+  padding: 5px 25px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(71, 128, 101);
+}
+
+.infoBox {
+  text-align: center;
+  text-align: center;
+  background-color: rgb(220, 250, 236);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.formPositioning {
+  display: block;
+}
+
+.inAside-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.inAside__img {
+  width: 50%;
+}
+/* 
+.imgForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imgForm__containerInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgForm__input {
+  flex: 1;
+} */
+
+/* .imgForm__label {
+  display: block;
+  text-align: center;
+} */
