@@ -17,7 +17,7 @@ let inMainForm = `<form class="form">
 </div>
 </form>
 <div class="infoBox">
-    Enter 10 numbers, seperated by comma into the input field
+    Enter 10 numbers, seperated by whitespace into the input field
 </div>`;
 
 const addListener = () => {
